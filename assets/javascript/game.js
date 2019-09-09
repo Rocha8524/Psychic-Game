@@ -3,6 +3,7 @@ var letters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","
 
 // Set Up Variables for game
 var computerChoice; 
+var userInput;
 var userWins = 0;
 var userLosses = 0;
 var chancesLeft = 10;
@@ -14,9 +15,8 @@ computerChoice = letters[Math.floor(Math.random()*letters.length)];
 };
 
 // Set up user letter
-document.onekeyup = function(event) {
-    var userInput = event.keyCode;
-    newFunction(userInput); 
+var userInput = document.onekeyup = function() {
+    
 }
 
 // Set up conditions for chances left.
@@ -33,14 +33,14 @@ var madeChoice = function() {
 // Set up conditions for winning
     if (userInput == computerChoice) {
         userWins++;
-        document.getElementsById("wins").innerHTML = userWins;
+        document.getElementById("wins").innerHTML = userWins;
         resetPsychic();
     } 
 
 // Set up conditions for losing
     else if (chancesLeft == 0) {
         userLosses++;
-        document.getElementsById("losses").innerHTML = userLosses;
+        document.getElementById("losses").innerHTML = userLosses;
         resetPsychic();
     }; 
 
@@ -50,7 +50,3 @@ var resetPsychic = function() {
     guessesMade = [];
     randomLetter();
     };
-
-function newFunction(userInput) {
-    userInput.push;
-}
