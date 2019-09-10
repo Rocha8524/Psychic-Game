@@ -48,7 +48,6 @@ document.onkeyup = function (event) {
 
     // Reset psychic game
     var resetPsychicGame = function () {
-        guesses = [];
         chancesLeft = 10;
         newChoices();
         madeChoices();
