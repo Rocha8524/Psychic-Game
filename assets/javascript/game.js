@@ -11,12 +11,11 @@ var computerChoice = [];
 // Set up computer input
 var randomLetter = function() {
     computerChoice = gameLetters[Math.floor(Math.random() * (gameLetters.length))];
-    console.log(computerChoice[0]);
 }
 
 // Set up text for guesses made.
 var madeChoices = function () {
-    document.getElementById("guesses-made").innerHTML = "Guesses Made: " + guessesMade;
+    document.getElementById("guesses-made").innerHTML = "Guesses Made: " + guessesMade.join(", ");
 }
 
 // Set up conditions for chances left.
