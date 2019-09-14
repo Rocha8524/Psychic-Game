@@ -26,6 +26,7 @@ var guessesLeft = function () {
 // Reset psychic game
 var resetPsychicGame = function () {
     chancesLeft = 10;
+    guessesMade.length = 0;
     randomLetter();
     madeChoices();
     guessesLeft();
